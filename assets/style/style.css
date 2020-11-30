@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    background-image: url('images/photo-1498855926480-d98e83099315.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+#body::before{
+    content:'' ;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.4) ;
+}
+
+#main{
+    position: relative;
+    z-index: 20000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100vh;
+    padding-top: 4%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 3%;
+}
+
+#first{
+    width: 50%;
+    display: flex;
+}
+p{
+    font-size: 20px;
+}
+#person{
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 18px;
+}
+span{
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.greeting{
+    padding-left: 10px;
+}
+
+#refresh{
+    background-color: transparent;
+    font-size: 22px;
+    color: white;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+}
+
+.second{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.bigTime{
+    display: flex;
+}
+h1{
+    font-size: 13em;
+}
+
+#GMT{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+#btn-div{
+    display: flex;
+    align-items: flex-end;
+}
+
+#btn{
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;  
+    border: none;
+    outline: none;
+    font-size: 19px;
+}
+
+#white{
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5%;
+    padding-left: 7%;
+    gap: 2em;
+    background-color: rgba(224, 228, 226, 0.788);
+    height: 40%;
+    color: rgb(46, 44, 44);
+    position: absolute;
+    bottom:0 ;
+    right: 0;
+    width: 100%;
+}
+
+#white.open{
+    display: grid;
+}
+
+#white > div > .smallText-2{
+   
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#white > div > .smallText-1{
+   
+    font-size: 17px;
+    font-weight: normal;
+}
+
+
+@media screen and (max-width:996px){
+    body{ font-size: 70%; }
+    p{font-size: 15px; }
+    #person{font-size: 10px; }
+    span{font-size: 17px;}
+    #first{width: 80%;}
+    .second{flex-direction: column;}
+    button{margin-top: 20px;}
+    #white > div > .smallText-2{
+        font-size: 30px;    
+    }
+    #white > div > .smallText-1{
+        font-size: 17px;    
+    }   
+    #GMT{
+        margin-bottom: 27px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:800px){
+    #main{
+        padding-top: 7%;
+    }
+    span.greeting{
+        font-size:16px ;
+        font-weight: normal;
+    }
+
+    span#zone{
+        font-size:16px ;
+    }
+
+    #refresh{
+        font-weight: normal;
+        font-size: 15px;
+    }
+
+    #btn{
+        width: 87px;
+        height: 30px;
+        font-size: 16px;
+    }
+    #GMT{
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:600px){
+    #main{
+        padding-top: 9%;  }
+    span
+    body{ font-size: 30%; }
+    
+    span{font-size: 17px;}
+    #white > div > p{
+        font-size: 25px;
+        font-weight: bold;
+    }
+ 
+    #GMT{
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    #white > div > .smallText-2{
+        font-size: 25px;    
+    }
+    #white > div > .smallText-1{
+        font-size: 13px;    
+    }   
+}
+
+@media screen and (max-width:500px){
+    body{ font-size: 40%; }
+
+    #main{
+        padding-top: 14%;  }
+    span.greeting{font-size: 10px;}
+
+        #white > div > .smallText-2{
+            font-size: 20px;    
+        }
+        #white > div > .smallText-1{
+            font-size: 13px;    
+        }   
+        #btn{
+            margin-top: 30px;
+        }
+}
